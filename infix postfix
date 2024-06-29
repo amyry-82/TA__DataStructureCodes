@@ -1,0 +1,41 @@
+//zahraamiri   4011406106
+#include <iostream>
+#include <stack>
+#include <string>
+
+using namespace std;
+
+class ExpressionConverter {
+public:
+    string infixToPostfix(string infix) {
+        // الگوریتم تبدیل infix به postfix
+    }
+
+    string postfixToInfix(string postfix) {
+        // الگوریتم تبدیل postfix به infix
+    }
+
+    int evaluatePostfix(string postfix) {
+        // الگوریتم محاسبه عبارت ریاضی postfix
+    }
+
+    int evaluateInfix(string infix) {
+        string postfix = infixToPostfix(infix);
+        return evaluatePostfix(postfix);
+    }
+};
+
+int main() {
+    ExpressionConverter converter;
+    string infixExpression = "3+4*2/(1-5)^2";
+    string postfixExpression = converter.infixToPostfix(infixExpression);
+    cout << "Infix to Postfix: " << postfixExpression << endl;
+
+    string infixFromPostfix = converter.postfixToInfix(postfixExpression);
+    cout << "Postfix to Infix: " << infixFromPostfix << endl;
+
+    int result = converter.evaluateInfix(infixExpression);
+    cout << "Result of Infix expression: " << result << endl;
+
+    return 0;
+}
